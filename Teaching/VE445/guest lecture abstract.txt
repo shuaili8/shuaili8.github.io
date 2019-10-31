@@ -1,0 +1,13 @@
+Title: Feature Interactions in Wide and Deep Models for Recommender Systems
+Time: Nov 14 (Thu), 8:00-9:40
+Venue: Chen Rui Qiu Building 102
+Speaker: Dr. Ruiming Tang
+
+Abstract:
+
+Recommender systems are important in people's everyday life. How to model feature interactions effectively is a key factor to the recommendation performance. Wide models, which are simple yet effective, have been applied in industrial recommender systems for several years. Deep learning has achieved dramatic success in computer vision (CV) and natural language processing (NLP), because of its powerful ability on feature representation. For the recent years, many researchers and industrial teams propose excellent deep learning models and deploy them on the commercial systems.
+In this talk, Ruiming will present some challenges and solutions in modeling feature interactions in both wide models and deep learning based models. He will also elaborate some deep learning models and AutoML techniques proposed by the research team in Noah's Ark Lab. Also, he will show some online AB testing results when applying deep learning and AutoML techniques in commercial recommender system in Huawei.
+
+Ruiming Tang is a senior researcher in recommendation and search project team, Huawei Noah's Ark Lab. He joint Noah's Ark Lab in 2014. His research topics include recommender system, deep learning, reinforcement learning, AutoML, Graph Neural Network and etc. He published multiple research works on top-tier conferences and journals, on the topic of recommender system, such as WWW, IJCAI, SIGIR, RecSys, AAAI, TOIS, WSDM. Before joining Huawei, Ruiming received his Ph.D. degree in Computer Science from National University of Singapore (NUS) in 2014 and received his Bachelor degree in Computer Science from Northeastern University in China (NEU) in 2009. 
+
+
