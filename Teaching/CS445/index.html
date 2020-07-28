@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style>
+        
+        body
+        {
+          margin: 10pt;
+          padding: 0;
+          font-size: 10pt;
+          font-family: verdana, arial, helvetica;
+          color: #000000;
+          background-color: #ffffff;
+        }
+
+        #pagecontainer
+        {
+          width: 700px;
+        }
+
+        a:link { color: #903; }
+        a:visited { color: #603; }
+
+        a:hover, a:active
+        {
+          color: #603;
+        }
+
+        h1
+        {
+          font-size: 14pt;
+          color: #903;
+          margin: 0;
+          padding-top: .5em;
+          font-weight: bold;
+        }
+
+        h2
+        {
+          font-size: 12pt;
+          color: #903;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        h3
+        {
+          font-size: 10pt;
+          color: #000;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        ul
+        {
+          list-style-type: none;
+          padding: 0;
+          margin-top: 10pt;
+          margin-left: 0pt;
+        }
+
+        li { margin-top: 5pt; }
+
+        #description li
+        {
+          list-style-type: disc;
+          margin-left: 15pt;
+        }
+
+        table
+        { 
+          font-size:100%;
+          border-collapse: collapse;
+          width: 100%;  
+        }
+
+        th, td {
+          text-align: left;
+          padding: 2px;
+        }
+
+        tr:nth-child(even) 
+        {
+          background-color: #f2f2f2;
+        }       
+    </style>
+    <title>CS445: Combinatorics</title>
+    <style type="text/css" abt="234"></style>
+</head>
+<body>
+    <div id="pagecontainer">
+    <div id="heading">
+        <h1>CS445: Combinatorics</h1>
+        Shanghai Jiao Tong University, Fall 2020
+    </div>
+
+    <div id="staff">
+        <a name="staff"><h2>Teaching Staff</h2></a> 
+
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:15%"></th>
+                <th style="width:20%">name</th>
+                <th style="width:30%">email</th>
+                <th style="width:35%">office hour</th>
+            </tr>
+
+            <tr>
+                <td>Instructor</td>   
+                <td><a href="http://shuaili8.github.io" target="_blank">Shuai Li</a></td>
+                <td>shuaili8@sjtu.edu.cn</td>
+                <td>Thu 16:00-17:00 <br>Rm 1406-2, Software College </td>
+            </tr>
+
+            <tr>
+                <td>TA</td>   
+                <td>Fang Kong</td>
+                <td>-</td>
+                <td>- <br>-</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div id="announcements">
+        <a name="announcements"><h2>News</h2></a> 
+        <ul>
+            <!-- current announcements -->
+            <!-- previous announcements  
+                <li><b>Lab 3</b> is on Nov 27 8:00-9:40 at Dong Xia Yuan 204 and is about EM and GCN. [<a href="Lab3.pdf"  target="_blank">pdf</a>]</li>
+            <li><b>Guest Lecture</b> is on Recommendation Systems. [<a href="guest lecture abstract.txt"  target="_blank">abstract</a>][<a href="Tang-recsys.pdf"  target="_blank">slides</a>] </li>
+            <li><b>Lab 2</b> is about the R-CNN variants and autoencoder. [<a href="Lab2.pdf"  target="_blank">pdf</a>]</li>
+            <li><b>Lab 1</b> is on tensorflow and the project. [<a href="Lab1.pdf"  target="_blank">pdf</a>][<a href="https://cs224d.stanford.edu/lectures/CS224d-Lecture7.pdf"  target="_blank">tensorflow tutorial</a>][<a href="https://www.kaggle.com/chenhoushuang/cnn-demo"  target="_blank">demo</a>]</li>
+            <li><b></b> </li>
+            <li><b>Midterm exam</b> paper can be checked on the class of Nov 9.</li>
+            <li><b>Lecture on Nov 5</b> is moved to Nov 9.</li>      
+  			<li><b>Assignment 2</b> is out and is due on Oct 28 </li>
+  			<li><b>Assignment 3</b> is out and is due on Nov 28.</li>
+  			<li><b>Project</b> is out and is due on Dec 1. Here is the kaggle <a href="https://www.kaggle.com/c/ve445-2019-fall-project"  target="_blank">link</a>.</li>
+            -->
+        </ul></div>
+
+    <div id="courseinfo">
+        <h2>Course Information</h2>
+        <p></p>
+        <p><b>Lecture times</b>
+        <ul>
+            <li>Mon 8:00-9:40 at Dong Shang Yuan 407 (Week 1-16) </li>
+            <li>Thu 10:00-11:40 at Dong Shang Yuan 407 (Week 1-8)</li>
+        </ul></p>
+        <!-- <p><b>Recitation time</b> Mon 18:00-19:40 at F103 </p> -->
+        <p><b>Grading</b> Your grade will be determined -
+        <!-- from a final exam (35%), a midterm exam (25%), a project (20%), and labs/homeworks (20%). -->
+    </p>
+        <p><b>Textbook and References</b>
+        <ul>
+            <li>Graph Theory, Reinhard Diestel [<a href="http://diestel-graph-theory.com/basic.html">Preview link</a>]  </li>
+            <li>Introduction to Graph Theory, Douglas West </li>
+            <li>A Course in Combinatorics, J. H. Van Lint</li>
+        </ul></p>
+    </div>
+
+    <div id="lectures">
+        <a name="lectures"></a>
+        <h2>Schedule</h2>
+
+        <table id="schedule">
+        <tbody><tr>
+            <th style="width:7%">week</th>
+            <th style="width:10%">date</th>
+            <th style="width:45%">topic</th>
+            <th style="width:38%">materials</th>
+        </tr>
+
+        <tr>
+            <td>1</td><td>Sep 7</td><td>1 Introduction</td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 10</td><td>2 Basics</td><td></td>
+        </tr>
+        <tr>
+            <td>2</td><td>Sep 14</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 17</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>3</td><td>Sep 21</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 24</td><td></td><td></td>
+        </tr>
+        <!-- 
+
+        <tr>
+            <td>2</td><td>Sep 17</td><td>3 Linear Regression</td><td><a href="L3_linear regression.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td><br>3</td><td>Sep 19<br>Sep 24</td><td>4 Logistic Regression</td><td><a href="L4_logistic regression.pdf"  target="_blank">pdf</a></td>
+        </tr>
+
+        <tr>
+            <td></td><td>Sep 26</td><td>5 SVM</td><td><a href="L5_svm.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 27</td><td>Practice: Python</td><td><br></td>
+        </tr>
+
+        <tr>
+            <td style="color: gray">4</td><td style="color: gray">Oct 1<br>Oct 3</td><td style="color: gray"><i>National Day Holiday</i></td><td><br></td>
+        </tr>
+
+        <tr>
+            <td>5</td><td>Oct 8</td><td>5 SVM (cont.)</td><td><br></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 10<br>Oct 11</td><td>6 Neural Networks</td><td><a href="L6_nn.pdf"  target="_blank">pdf</a> <a href="L6 backpropagation demo.html"  target="_blank">demo</a> </td>
+        </tr>
+
+        <tr>
+            <td>6</td><td>Oct 15<br>Oct 17</td><td>7 Convolutional Neural Networks</td><td><a href="L7_cnn.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        
+        <tr>
+            <td>7</td><td>Oct 22</td><td>8 Recurrent Neural Networks</td><td><a href="L8_rnn.pdf"  target="_blank">pdf</a> <a href="rnn vs lstm.mp4"  target="_blank">demo</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 24</td><td>9 Decision Tree</td><td><a href="L9_decision tree.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 25</td><td>Review for the Midterm</td><td><a href="Review for midterm.pdf"  target="_blank">pdf</a></td>
+        </tr>
+
+        <tr>
+            <td>8</td><td>Oct 29</td><td style="color: #903"><i>Midterm Exam</i></td><td><br></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 31</td><td>9 Decision Tree (cont.)</td><td></td>
+        </tr>
+
+        <tr>
+            <td>9</td><td style="color: gray">Nov 5</td><td style="color: gray"><i>China International Import Expo</i></td><td><br></td>
+        </tr>
+        <tr>
+            <td></td><td>Nov 7<br>Nov 8</td><td>10 Clustering</td><td><a href="L10_clustering.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td><br>10</td><td>Nov 9<br>Nov 12</td><td>11 Dimensionality Reduction</td><td><a href="L11_dimensionality reduction.pdf"  target="_blank">pdf</a></td>
+        </tr>
+
+        <tr>
+            <td></td><td>Nov 14</td><td>Guest Lecture: Recommendation Systems</td><td><br></td>
+        </tr>
+
+        <tr>
+            <td>11<br> </td><td>Nov 19<br>Nov 21</td><td>11 Dimensionality Reduction (cont.)</td><td><br></td>
+        </tr>
+        <tr>
+            <td><br>12</td><td>Nov 22<br>Nov 26</td><td>12 Gaussian Mixture Models</td><td><a href="L12_gmm.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Nov 28</td><td>13 Hidden Markov Models</td><td><a href="L13_hmm.pdf"  target="_blank">pdf</a></td>
+        </tr>
+
+        <tr>
+            <td>13</td><td>Dec 3</td><td>HMM, Review for the Final</td><td><br></td>
+        </tr>
+        <tr>
+            <td></td><td>Dec 5</td><td>Review for the Final</td><td><a href="Review for final.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Dec 6</td><td style="color: #903"><i>Final Exam</i></td><td><br></td>
+        </tr> -->
+
+
+
+        </tbody></table>
+    </div>
+
+    </div>
+</body>
+</html>
