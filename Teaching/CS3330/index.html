@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style>
+        
+        body
+        {
+          margin: 10pt;
+          padding: 0;
+          font-size: 10pt;
+          font-family: verdana, arial, helvetica;
+          color: #000000;
+          background-color: #ffffff;
+        }
+
+        #pagecontainer
+        {
+          width: 700px;
+        }
+
+        a:link { color: #903; }
+        a:visited { color: #603; }
+
+        a:hover, a:active
+        {
+          color: #603;
+        }
+
+        h1
+        {
+          font-size: 14pt;
+          color: #903;
+          margin: 0;
+          padding-top: .5em;
+          font-weight: bold;
+        }
+
+        h2
+        {
+          font-size: 12pt;
+          color: #903;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        h3
+        {
+          font-size: 10pt;
+          color: #000;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        ul
+        {
+          list-style-type: none;
+          padding: 0;
+          margin-top: 10pt;
+          margin-left: 0pt;
+        }
+
+        li { margin-top: 5pt; }
+
+        #description li
+        {
+          list-style-type: disc;
+          margin-left: 15pt;
+        }
+
+        table
+        { 
+          font-size:100%;
+          border-collapse: collapse;
+          width: 100%;  
+        }
+
+        th, td {
+          text-align: left;
+          padding: 2px;
+        }
+
+        tr:nth-child(even) 
+        {
+          background-color: #f2f2f2;
+        }       
+    </style>
+    <title>CS3330: Combinatorics</title>
+    <style type="text/css" abt="234"></style>
+</head>
+<body>
+    <div id="pagecontainer">
+    <div id="heading">
+        <h1>CS3330: Combinatorics</h1>
+        Shanghai Jiao Tong University, Fall 2022
+    </div>
+
+    <div id="staff">
+        <a name="staff"><h2>Teaching Staff</h2></a> 
+
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:15%"></th>
+                <th style="width:20%">name</th>
+                <th style="width:30%">email</th>
+                <th style="width:35%">office hour</th>
+            </tr>
+
+            <tr>
+                <td>Instructor</td>   
+                <td><a href="http://shuaili8.github.io" target="_blank">Shuai Li</a></td>
+                <td>shuaili8@sjtu.edu.cn</td>
+                <td>Mon 2-3 PM <br>Rm 1406-2, Software College </td>
+            </tr>
+
+            <tr>
+                <td></td>   
+                <td>Biaoshuai Tao</td>
+                <td>bstao@sjtu.edu.cn</td>
+                <td>Thu 10 AM - noon <br>Rm 1410-2, Software College </td>
+            </tr>
+
+            <tr>
+                <td>TA</td>   
+                <td>Ruofeng Yang</td>
+                <td>wanshuiyin@sjtu.edu.cn</td>
+                <td>TBD <br>Rm 1119, Software College</td>
+            </tr>
+
+            <tr>
+                <td></td>   
+                <td>Yichen Tao</td>
+                <td>taoyc0904@sjtu.edu.cn</td>
+                <td>Mon 7-9 PM <br>Activity Room of No.1 Dormitory Building, East District</td>
+            </tr>
+
+            
+        </tbody>
+        </table>
+    </div>
+
+    <div id="announcements">
+        <a name="announcements"><h2>News</h2></a> 
+        <ul>
+        	<!-- 
+             -->
+            <!-- <li><b>HW10</b> is out and is due on Dec 18. <b>Solution 10</b> is out.</li>
+            <li><b>HW9</b> is out and is due on Dec 2. <b>Solution 9</b> is out.</li>
+            <li>The reading project is out and is due on Jan 2. </li> -->
+           <!--  
+            <li><b>HW8</b> is out and is due on Nov 19. <b>Solution 8</b> is out.</li>
+            <li><b>HW7</b> is out and is due on Nov 12. <b>Solution 7</b> is out.</li>
+            <li><b>HW6</b> is out and is due on Oct 31. <b>Solution 6</b> is out.</li>
+            <li><b>HW5</b> is out and is due on Oct 25. <b>Solution 5</b> is out.</li>
+            <li><b>HW4</b> is out and is due on Oct 19. <b>Solution 4</b> is out. </li>
+            <li><b>HW3</b> is out and is due on Oct 13. <b>Solution 3</b> is out. </li>
+            <li><b>HW2</b> is out and is due on Oct 8. <b>Solution 2</b> is out. </li>
+            <li><b>HW1</b> is out and is due on Sep 27. <b>Solution 1</b> is out. </li> 
+        -->
+            <!-- <li>The project on <b>entry editing</b> is out and is due on Dec 19. </li> -->
+        </ul></div>
+
+    <div id="courseinfo">
+        <h2>Course Information</h2>
+        <p></p>
+        <p><b>Lecture times</b>
+        <ul>
+            <li>Mon 10:00-11:40 at Dong Shang Yuan 205 (Week 1-16) </li>
+            <li>Thu 8:00-9:40 at Dong Shang Yuan 205 (Week 2-16 biweekly)</li>
+        </ul></p>
+        <!-- <p><b>Recitation time</b> Mon 18:00-19:40 at F103 </p> -->
+        <p><b>Grading</b> Your grade will be determined from a final exam (30%), a midterm exam (15%), projects (15%), assignments (35%) and participance (5%).
+    </p>
+        <p><b>References</b>
+        <ul>
+            <li>Graph Theory, by Reinhard Diestel [<a href="http://diestel-graph-theory.com/basic.html">Preview link</a>]  </li>
+            <li>Introduction to Graph Theory, by Douglas West </li>
+            <li>Combinatorics and Graph Theory, by Harris, Hirst and Mossinghoff </li>
+            <li>Graph Theory, by Bondy and Murty</li>
+            <li>A Course in Combinatorics, by J. H. Van Lint</li>
+        </ul></p>
+    </div>
+
+    <div id="lectures">
+        <a name="lectures"></a>
+        <h2>Schedule</h2>
+
+        <table id="schedule">
+        <tbody><tr>
+            <th style="width:7%">week</th>
+            <th style="width:10%">date</th>
+            <th style="width:45%">topic</th>
+            <th style="width:38%">materials</th>
+        </tr>
+
+        <tr>
+            <td>1</td><td></td><td style="color: gray"><i>Mid-Autumn Festival</i></td><td></td>
+        </tr>
+        <tr>
+            <td>2</td><td>Sep 19</td><td>1 Introduction and basics</td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 22</td><td>2 Girth, connectivity and bipartite graphs</td><td></td>
+        </tr>
+        <tr>
+            <td>3</td><td>Sep 26</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>4</td><td>Oct 9</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>5</td><td>Oct 10</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Oct 17</td><td></td><td></td>
+        </tr>
+        <!-- <tr>
+            <td>2</td><td>Sep 19</td><td>1 Introduction and basics</td><td><a href="L1_intro_light.pdf"  target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 16</td><td>2 Girth, connectivity and bipartite graphs</td><td><a href="L2_girth,connectivity,bipartite graphs.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 18</td><td></td><td> </td>
+        </tr>
+        <tr>
+            <td>2</td><td></td><td style="color: gray"><i>Mid-Autumn Festival</i></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 23</td><td>3 Trees</td><td><a href="L3_trees.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>3</td><td>Sep 27</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Sep 30</td><td>4 Circuits</td><td><a href="L4_circuits.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>4</td><td></td><td style="color: gray"><i>National Day Holiday</i></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 9</td><td>5 Matchings</td><td><a href="L5_matchings.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>5</td><td>Oct 11</td><td></td><td><a href="Gale-Shapley.gif" target="_blank">Gale-Shapley.gif</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 14</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Oct 18</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 21</td><td>6 Connectivity</td><td><a href="L6_connectivity.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td>7</td><td>Oct 25</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td>Oct 28</td><td>7 Coloring</td><td><a href="L7_coloring.pdf" target="_blank">pdf</a> (updated on Nov 28)</td>
+        </tr>
+        <tr>
+            <td>8</td><td>Nov 1</td><td>Midterm Review</td><td><a href="midterm review.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td></td><td>Nov 4</td><td style="color: #903"><i>Midterm Exam</i></td><td></td>
+        </tr>
+        <tr>
+            <td>9</td><td>Nov 8</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>10</td><td>Nov 15</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>11</td><td>Nov 22</td><td>8 Planarity</td><td><a href="L8_planarity.pdf" target="_blank">pdf</a> (updated on Dec 5)</td>
+        </tr>
+        <tr>
+            <td>12</td><td>Nov 29</td><td></td><td> </td>
+        </tr>
+        <tr>
+            <td>13</td><td>Dec 6</td><td>9 Ramsey Theory</td><td><a href="L9_ramsey.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>14</td><td>Dec 13</td><td>Final Exam Review</td><td><a href="final exam review.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>15</td><td>Dec 20</td><td>Guest Lecture: Prof. Biaoshuai Tao</td><td> </td>
+        </tr>
+        <tr>
+            <td>16</td><td>Dec 27</td><td style="color: #903"><i>Final Exam</i></td><td> </td>
+        </tr> -->
+        <!-- 
+        
+        <tr>
+            <td>14</td><td>Dec 7</td><td></td><td><a href="L16.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td>15</td><td>Dec 14</td><td></td><td><a href="final review.pdf" target="_blank">final review</a></td>
+        </tr>
+        <tr>
+            <td>16</td><td>Dec 21</td><td style="color: #903"><i>Final Exam</i></td><td></td>
+        </tr>
+         -->
+
+
+        </tbody></table>
+    </div>
+
+    </div>
+</body>
+</html>
