@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style>
+        
+        body
+        {
+          margin: 10pt;
+          padding: 0;
+          font-size: 10pt;
+          font-family: verdana, arial, helvetica;
+          color: #000000;
+          background-color: #ffffff;
+        }
+
+        #pagecontainer
+        {
+          width: 700px;
+        }
+
+        a:link { color: #903; }
+        a:visited { color: #603; }
+
+        a:hover, a:active
+        {
+          color: #603;
+        }
+
+        h1
+        {
+          font-size: 14pt;
+          color: #903;
+          margin: 0;
+          padding-top: .5em;
+          font-weight: bold;
+        }
+
+        h2
+        {
+          font-size: 12pt;
+          color: #903;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        h3
+        {
+          font-size: 10pt;
+          color: #000;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        ul
+        {
+          list-style-type: none;
+          padding: 0;
+          margin-top: 10pt;
+          margin-left: 0pt;
+        }
+
+        li { margin-top: 5pt; }
+
+        #description li
+        {
+          list-style-type: disc;
+          margin-left: 15pt;
+        }
+
+        table
+        { 
+          font-size:100%;
+          border-collapse: collapse;
+          width: 100%;  
+        }
+
+        th, td {
+          text-align: left;
+          padding: 2px;
+        }
+
+        tr:nth-child(even) 
+        {
+          background-color: #f2f2f2;
+        }       
+    </style>
+    <title>AI3601: Reinforcement Learning</title>
+    <style type="text/css" abt="234"></style>
+</head>
+<body>
+    <div id="pagecontainer">
+    <div id="heading">
+        <h1>CS3308: Machine Learning</h1>
+        Shanghai Jiao Tong University, Spring 2023
+    </div>
+
+    <div id="staff">
+        <a name="staff"><h2>Teaching Staff</h2></a> 
+
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:15%"></th>
+                <th style="width:20%">name</th>
+                <th style="width:30%">email</th>
+                <th style="width:35%">office hour</th>
+            </tr>
+
+            <tr>
+                <td>Instructor</td>   
+                <td><a href="http://shuaili8.github.io" target="_blank">Shuai Li</a></td>
+                <td>shuaili8@sjtu.edu.cn</td>
+                <td>Tue 1-2 PM <br>Rm 1406-2, Software College </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+   <!--  <div id="announcements">
+        <a name="announcements"><h2>News</h2></a> 
+        <ul>
+            
+        </ul></div> -->
+
+    <div id="courseinfo">
+        <h2>Course Information</h2>
+        <p></p>
+        <p><b>Lecture times</b>
+        <ul>
+            <li>Tue 12:55-15:40 at Shang Yuan 305</li>
+        </ul></p>
+        <!-- <p><b>Grading</b> 
+           
+    </p> -->
+        <!-- <p><b>References</b>
+        <ul>
+            <li><a href="https://www.davidsilver.uk/teaching/" target="_blank">UCL Course on RL</a> by David Silver</li> 
+            <li><a href="https://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank">CS 285: Deep Reinforcement Learning</a> by Sergey Levine at UC Berkeley</li>
+            <li><a href="https://web.stanford.edu/class/cs234/" target="_blank">CS234: Reinforcement Learning</a> by Emma Brunskill at Stanford</li>
+            <li><a href="http://incompleteideas.net/book/RLbook2020.pdf" target="_blank">Reinforcement Learning: An Introduction</a> by Rich Sutton and Andew Barto</li>
+        </ul></p> -->
+    </div>
+
+    <div id="lectures">
+        <a name="lectures"></a>
+        <h2>Schedule</h2>
+
+        <table id="schedule">
+        <tbody><tr>
+            <th style="width:7%">week</th>
+            <th style="width:10%">date</th>
+            <th style="width:45%">topic</th>
+            <th style="width:38%">materials</th>
+        </tr>
+
+        <tr>
+            <td>13</td><td>May 9</td><td>Online Subgradient Descent</td><td><a href="L7_OSD_v2.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>14</td><td>May 16</td><td>Online Mirror Descent</td><td><a href="L8_OMD_v2.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>15</td><td>May 23</td><td>Multi-armed Bandits</td><td><a href="L9_MAB.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>16</td><td>May 30</td><td></td><td></td>
+        </tr>
+        <!-- <tr>
+            <td>2</td><td>Feb 21</td><td>2 Markov Decision Process</td><td></td>
+        </tr>
+        <tr>
+            <td>3</td><td>Feb 28</td><td>3 Value-based Methods</td><td></td>
+        </tr>
+        <tr>
+            <td>4</td><td>Mar 7</td><td>4 Policy-based Methods</td><td></td>
+        </tr>
+        <tr>
+            <td>5</td><td>Mar 14</td><td>5 Planning</td><td></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Mar 21</td><td>6 Approximation</td><td></td>
+        </tr>
+        <tr>
+            <td>7</td><td>Mar 28</td><td>7 Deep Reinforcement Learning</td><td></td>
+        </tr>
+        <tr>
+            <td>8</td><td>Apr 4</td><td>8 Deep Policy Methods</td><td></td>
+        </tr>
+        <tr>
+            <td>9</td><td>Apr 11</td><td>9 Model-based Reinforcement Learning</td><td></td>
+        </tr>
+        <tr>
+            <td>10</td><td>Apr 18</td><td>10 Immitation Learning</td><td></td>
+        </tr>
+        <tr>
+            <td>11</td><td>Apr 25</td><td>11 Offline Reinforcement Learning</td><td></td>
+        </tr>
+        <tr>
+            <td style="color: gray">12</td><td style="color: gray">May 2</td><td style="color: gray"><i>Holiday</i></td><td><br></td>
+        </tr>
+        <tr>
+            <td>13</td><td>May 9</td><td>12 Multi-agent Reinforcement Learning</td><td></td>
+        </tr>
+        <tr>
+            <td>14</td><td>May 16</td><td>13 Parametrized Reinforcement Learning</td><td></td>
+        </tr>
+        <tr>
+            <td>16</td><td>May 30<br>May 31</td><td style="color: #903"><i>Presentations</i></td><td></td>
+        </tr>
+ -->
+        <!-- 
+        
+        
+        <tr>
+            <td>4</td><td>Oct 9</td><td>4 Constraint Satisfaction Problems</td><td><a href="L4_CSPs.pdf" target="_blank">pdf</a> <a href="https://inst.eecs.berkeley.edu/~cs188/fa19/assets/demos/csp/csp_demos.html" target="_blank">demo</a></td>
+        </tr>
+        <tr>
+            <td>5</td><td>Oct 14</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Oct 21</td><td>5 Adversarial Search</td><td><a href="L5_adversarial_search.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td>7</td><td>Oct 28</td><td>6 Markov Decision Processes</td><td><a href="L6_mdp.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td>8</td><td>Nov 4</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>9</td><td>Nov 11</td><td>7 Reinforcement Learning</td><td><a href="L7_rl.pdf" target="_blank">pdf</a> </td>
+        </tr>
+        <tr>
+            <td>10</td><td>Nov 18</td><td>8 Regression</td><td><a href="L8_regression.pdf" target="_blank">pdf</a> (updated on Dec 2)</td>
+        </tr>
+        <tr>
+            <td>11</td><td>Nov 25</td><td>9 Neural Networks</td><td><a href="L9_nn.pdf" target="_blank">pdf</a> (updated on Dec 9)</td>
+        </tr>
+        <tr>
+            <td>12</td><td>Dec 2</td><td>10 Bayes Nets: Probabilistic Models</td><td><a href="L10_bayes_nets_probabilistic_models.pdf" target="_blank">pdf</a> (updated on Dec 16)</td>
+        </tr>
+        <tr>
+            <td>13</td><td>Dec 9</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>14</td><td>Dec 16</td><td>11 Bayes Nets: Inference</td><td><a href="L11_bayes_nets_inference.pdf" target="_blank">pdf</a> (updated on Dec 23)</td>
+        </tr>
+        <tr>
+            <td>15</td><td>Dec 23</td><td>Final Review</td><td><a href="final review.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>16</td><td>Dec 30</td><td style="color: #903"><i>Presentation</i></td><td></td>
+        </tr> -->
+        
+        </tbody></table>
+    </div>
+
+    </div>
+</body>
+</html>
