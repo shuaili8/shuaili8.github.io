@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style>
+        
+        body
+        {
+          margin: 10pt;
+          padding: 0;
+          font-size: 10pt;
+          font-family: verdana, arial, helvetica;
+          color: #000000;
+          background-color: #ffffff;
+        }
+
+        #pagecontainer
+        {
+          width: 700px;
+        }
+
+        a:link { color: #903; }
+        a:visited { color: #603; }
+
+        a:hover, a:active
+        {
+          color: #603;
+        }
+
+        h1
+        {
+          font-size: 14pt;
+          color: #903;
+          margin: 0;
+          padding-top: .5em;
+          font-weight: bold;
+        }
+
+        h2
+        {
+          font-size: 12pt;
+          color: #903;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        h3
+        {
+          font-size: 10pt;
+          color: #000;
+          margin: 0;
+          padding-top: .8em;
+          font-weight: bold;
+        }
+
+        ul
+        {
+          list-style-type: none;
+          padding: 0;
+          margin-top: 10pt;
+          margin-left: 0pt;
+        }
+
+        li { margin-top: 5pt; }
+
+        #description li
+        {
+          list-style-type: disc;
+          margin-left: 15pt;
+        }
+
+        table
+        { 
+          font-size:100%;
+          border-collapse: collapse;
+          width: 100%;  
+        }
+
+        th, td {
+          text-align: left;
+          padding: 2px;
+        }
+
+        tr:nth-child(even) 
+        {
+          background-color: #f2f2f2;
+        }       
+    </style>
+    <title>CS3317: Artificial Intelligence</title>
+    <style type="text/css" abt="234"></style>
+</head>
+<body>
+    <div id="pagecontainer">
+    <div id="heading">
+        <h1>CS3317: Artificial Intelligence</h1>
+        Shanghai Jiao Tong University, Fall 2022
+    </div>
+
+    <div id="staff">
+        <a name="staff"><h2>Teaching Staff</h2></a> 
+
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:15%"></th>
+                <th style="width:20%">name</th>
+                <th style="width:30%">email</th>
+                <th style="width:35%">office hour</th>
+            </tr>
+
+            <tr>
+                <td>Instructor</td>   
+                <td><a href="http://shuaili8.github.io" target="_blank">Shuai Li</a></td>
+                <td>shuaili8@sjtu.edu.cn</td>
+                <td>Mon 2-3 PM <br>Rm 1406-2, Software College </td>
+            </tr>
+
+            <tr>
+                <td>Assistant Instructor</td>   
+                <td><a href="http://cindycia.github.io" target="_blank">Panpan Cai</a></td>
+                <td>cai_panpan@sjtu.edu.cn</td>
+                <td>Mon 3-4 PM <br>Online</td>
+            </tr>
+
+            <tr>
+                <td>Chief TA</td>   
+                <td>Zhihui Xie</td>
+                <td>fffffarmer@sjtu.edu.cn</td>
+                <td>Wed 7-9 PM <br>Online</td>
+            </tr>
+
+            <tr>
+                <td>TA</td>   
+                <td>Fang Kong</td>
+                <td>fangkong@sjtu.edu.cn</td>
+                <td>Thu 7-9 PM <br>Online</td>
+            </tr>
+
+            <tr>
+                <td></td>   
+                <td>Xu Liu</td>
+                <td>liu_skywalker@sjtu.edu.cn</td>
+                <td>Tue 7-9 PM <br>Rm 1119, Software College</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div id="announcements">
+        <a name="announcements"><h2>News</h2></a> 
+        <ul>
+            <li><b>HW 6</b> is out and is due on Jan 1. <b>Solution 6</b> is out.</li>
+            <li><b>HW 5</b> is out and is due on Dec 15. <b>Solution 5</b> is out.</li>
+            <li><b>HW 4</b> is out and is due on Nov 30. <b>Solution 4</b> is out.</li>
+            <li><b>Project</b> is out and is due on Dec 28. </li>
+            <li><b>HW 3</b> is out and is due on Nov 16. <b>Solution 3</b> is out.</li>
+            <li><b>HW 2</b> is out and is due on Oct 28. <b>Solution 2</b> is out.</li>
+            <li><b>HW 1</b> is out and is due on Oct 12. <b>Solution 1</b> is out.</li>
+            <!--  </li>
+            <li><b>Tutorial 3</b> is about the Project 2 and multi-task learning. [<a href="Tutorial3.pdf"  target="_blank">pdf</a>]</li>
+             -->
+            <!-- 
+            
+            <li><b>Tutorial 1</b> is about the Python basics, tensorflow and pytorch. [<a href="Tutorial1.pdf"  target="_blank">pdf</a>]</li> -->
+            <!-- current announcements -->
+           
+        </ul></div>
+
+    <div id="courseinfo">
+        <h2>Course Information</h2>
+        <p></p>
+        <p><b>Lecture times</b>
+        <ul>
+            <li>Thu 12:55-15:40 at Dong Zhong Yuan 2-203</li>
+        </ul></p>
+        <!-- <p><b>Recitation time</b> Mon 18:00-19:40 at F103 </p> -->
+        <p><b>Grading</b> Your grade will be determined by assignments (40%), a project (25%), a final exam (30%) and participance (5%).
+    </p>
+        <p><b>References</b>
+        <ul>
+            <li><a href="https://inst.eecs.berkeley.edu/~cs188/fa21/" target="_blank">CS 188 Introduction to Artificial Intelligence</a> by UC Berkeley</li> 
+            <li><a href="https://www.cs.cmu.edu/~15281-s20/" target="_blank">15-281 Artificial Intelligence: Representation and Problem Solving</a> by CMU</li>
+            <li><a href="https://stanford-cs221.github.io/spring2021/" target="_blank">CS221: Artificial Intelligence: Principles and Techniques</a> by Stanford</li>
+            <li>Artificial Intelligence: A Modern Approach, by Stuart Russell and Peter Norvig </li>
+        </ul></p>
+    </div>
+
+    <div id="lectures">
+        <a name="lectures"></a>
+        <h2>Schedule</h2>
+
+        <table id="schedule">
+        <tbody><tr>
+            <th style="width:7%">week</th>
+            <th style="width:10%">date</th>
+            <th style="width:45%">topic</th>
+            <th style="width:38%">materials</th>
+        </tr>
+
+        <tr>
+            <td>1</td><td>Sep 15</td><td>1 Introduction</td><td><a href="L1_intro_light.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>2</td><td>Sep 22</td><td>2 Search</td><td><a href="L2_search_light.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>3</td><td>Sep 29</td><td>3 Constraint Satisfaction Problems</td><td><a href="L3_CSPs_light.pdf" target="_blank">pdf</a> <a href="https://inst.eecs.berkeley.edu/~cs188/fa19/assets/demos/csp/csp_demos.html" target="_blank">demo</a></td>
+        </tr>
+        <tr>
+            <td>4</td><td>Oct 9</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>5</td><td>Oct 13</td><td>4 Boolean Satisfiability Problem</td><td><a href="L4_SAT.pdf" target="_blank">pdf</a> (updated on Oct 19) <a href="https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/" target="_blank">demo</a></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Oct 20</td><td>5 Adversarial Search</td><td><a href="L5_adversarial_search_light.pdf" target="_blank">pdf</a> (updated on Oct 19)</td>
+        </tr>
+        <tr>
+            <td>7</td><td>Oct 27</td><td>6 Markov Decision Processes</td><td><a href="L6_mdp_light.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>8</td><td>Nov 3</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>9</td><td>Nov 10</td><td>7 Reinforcement Learning</td><td><a href="L7_RL_light.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>10</td><td>Nov 17</td><td>8 Multi-armed Bandits</td><td><a href="L8_bandits.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>11</td><td>Nov 24</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>12</td><td>Dec 1</td><td>9 Bayes Nets: Probabilistic Models</td><td><a href="L9_bayes_nets_probabilistic_models_light.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>13</td><td>Dec 8</td><td>10 Bayes Nets: Inference</td><td><a href="L10_bayes_nets_inference_light.pdf" target="_blank">pdf</a> (updated on Dec 8)</td>
+        </tr>
+        <tr>
+            <td>14</td><td>Dec 15</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>15</td><td>Dec 22</td><td>Advanced Topics & Final Review</td><td><a href="final review.pdf" target="_blank">pdf</a></td>
+        </tr>
+        <tr>
+            <td>16</td><td>Dec 29</td><td style="color: #903"><i>Presentations</i></td><td></td>
+        </tr>        
+        </tbody></table>
+    </div>
+
+    </div>
+</body>
+</html>
